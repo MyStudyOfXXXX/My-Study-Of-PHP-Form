@@ -6,7 +6,7 @@
 </head>
 <center>
     <body>
-        <form action="mission_2-4.php" method="POST" enctype="multipart/form-data">
+        <form action="test4.php" method="POST" enctype="multipart/form-data">
             NAME：<input type="text" name="name"><br>
             <input type="submit" value="SEND"><br>
         </form>
@@ -14,14 +14,14 @@
     <?php
         $comment = @$_POST["name"];
         if(!empty($comment)){ 
-            $filename = "mission_2-4.txt";
+            $filename = "test4.txt";
             $fp = fopen($filename, "a");
             fwrite($fp, $comment."<br>");
             fclose($fp);
         }
     ?>
     <?php
-        $file_array = file('mission_2-4.txt');
+        $file_array = file('test4.txt');
  
         echo $file_array[0].'<br>';
         echo $file_array[1].'<br>';

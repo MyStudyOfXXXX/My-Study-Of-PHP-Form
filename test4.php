@@ -16,17 +16,13 @@
         if(!empty($comment)){ 
             $filename = "test4.txt";
             $fp = fopen($filename, "a");
-            fwrite($fp, $comment."<br>");
+            fwrite($fp, $comment."\n");
             fclose($fp);
         }
     ?>
     <?php
         $file_array = file('test4.txt');
- 
-        echo $file_array[0].'<br>';
-        echo $file_array[1].'<br>';
-        echo $file_array[2].'<br>';
-        
+
         foreach ($file_array as $key => $value) {
           print ($key . ":" . $value . "<br>");
         }

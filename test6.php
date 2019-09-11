@@ -6,7 +6,7 @@
 </head>
 <center>
     <body>
-        <form action="mission_3-2.php" method="POST" enctype="multipart/form-data">
+        <form action="test6.php" method="POST" enctype="multipart/form-data">
             NAME：<input type="text" name="name"><br>
             COMMENT：<textarea name="comment"></textarea><br>
             <input type="submit" value="SEND"><br>
@@ -28,14 +28,14 @@
         $time = $y.'/'.$m.'/'.$d.' '.$h.':'.$i.':'.$s;
 
         if(!empty($name) && !empty($comment)){  
-            $filename = "mission_3-2.txt";
+            $filename = "test6.txt";
             $number = count(file($filename))+1;
             $fp = fopen($filename, "a");
             fwrite($fp, $number.'<>'.$name."<>".$comment.'<>'.$time."\n");
             fclose($fp);
         }
         
-        $file_array = file('mission_3-2.txt');
+        $file_array = file('test6.txt');
 
         foreach($file_array as $value){  
             $file_array_ex = explode( '<>', $value );

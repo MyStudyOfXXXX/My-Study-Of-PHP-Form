@@ -2,14 +2,14 @@
 <head>
   <meta name="viewport" content="width=320, height=480, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta charset="utf-8">
-	<title>掲示板</title>
+	<title>test</title>
 </head>
 <center>
     <body>
         <form action="mission_3-2.php" method="POST" enctype="multipart/form-data">
-            名前：<input type="text" name="name"><br>
-            コメント：<textarea name="comment"></textarea><br>
-            <input type="submit" value="送信"><br>
+            NAME：<input type="text" name="name"><br>
+            COMMENT：<textarea name="comment"></textarea><br>
+            <input type="submit" value="SEND"><br>
         </form>
     </body>
     <?php

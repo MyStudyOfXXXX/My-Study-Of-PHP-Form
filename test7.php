@@ -2,21 +2,21 @@
 <head>
   <meta name="viewport" content="width=320, height=480, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta charset="utf-8">
-	<title>掲示板</title>
+	<title>test</title>
 </head>
 <center>
     <body>
-        <form action="mission_3-3.php" method="POST" enctype="multipart/form-data">
-            名前：<input type="text" name="name"><br>
-            コメント：<textarea name="comment"></textarea><br>
-            <input type="submit" value="送信"><br>
+        <form action="test7.php" method="POST" enctype="multipart/form-data">
+            NAME：<input type="text" name="name"><br>
+            COMMENT：<textarea name="comment"></textarea><br>
+            <input type="submit" value="SEND"><br>
         </form>
         <?php
 
         $name = @$_POST["name"];
         $comment = @$_POST["comment"];
         
-        $filename = "mission_3-3.txt";
+        $filename = "test7.txt";
 
         $y = date("Y");
         $m = date("m");
@@ -35,14 +35,14 @@
             fclose($fp);
         }
         
-        $file_array = file('mission_3-3.txt');
+        $file_array = file('test7.txt');
 
         foreach($file_array as $value){  
             $file_array_ex = explode( '<>', $value );
             $count = $file_array_ex[0];
         }
         ?>
-        <form action="mission_3-3.php" method="POST" enctype="multipart/form-data">
+        <form action="test7.php" method="POST" enctype="multipart/form-data">
             <select name="number" id="number">
             <?php
             for ($j = 1; $j <= $count; $j++) {
@@ -50,7 +50,7 @@
             }
             ?>
             </select>
-            <input type="submit" value="削除"><br>
+            <input type="submit" value="DELETE"><br>
         </form>
         <?php
         

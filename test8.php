@@ -35,7 +35,7 @@
             fclose($fp);
         }
         
-        $file_array = file('test8.txt');
+        $file_array = file('test8.txt'); 
 
         foreach($file_array as $value){  
             $file_array_ex = explode( '<>', $value );

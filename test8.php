@@ -51,6 +51,8 @@
             ?>
             </select>
             <input type="submit" value="SEND"><br>
+	</form>
+	<form action="test8.php" method="POST" enctype="multipart/form-data">
             <select name="edit" id="edit">
             <?php
             for ($j = 1; $j <= $count; $j++) {

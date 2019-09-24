@@ -8,7 +8,7 @@
     <body>
         <?php
 
-        $filename = 'mission_3-5.txt';
+        $filename = 'test9.txt';
         
         if(@$_POST['send_delete']){
 
@@ -33,7 +33,7 @@
     
                     }
     
-                    file_put_contents("mission_3-5.txt", $texts_delete);
+                    file_put_contents("test9.txt", $texts_delete);
     
                 }
     
@@ -114,7 +114,7 @@
                         }
                         $count = $key + 1;
                     }
-                    file_put_contents("mission_3-5.txt", $texts_edit);
+                    file_put_contents("test9.txt", $texts_edit);
                 }
             }
             else{
@@ -147,7 +147,7 @@
     
         ?>
 
-        <form action="mission_3-5.php" method="post">
+        <form action="test9.php" method="post">
             <p>name:<input type="text" name="name" value="<?php if(@$_POST['edit']){ echo @$edit_element_name; } ?>" placeholder="NAME"></p>
             <p>comment:<textarea name="comment" value="<?php if(@$_POST['edit']){ echo $edit_element_come; } ?>" placeholder="COMMENT" size="100"></textarea></p>
             <input type="hidden" name="number" value="<?php if(@$_POST['edit']){ echo $_POST['edit']; } ?>" >
@@ -155,7 +155,7 @@
             <input type="submit" name="send" value="SEND">
         </form>
 
-        <form action="mission_3-5.php" method="post">
+        <form action="test9.php" method="post">
             <p>
                 <p><select name="delete" id="delete">
                 <?php
@@ -169,7 +169,7 @@
             </p>
         </form>
 
-        <form action="mission_3-5.php" method="post">
+        <form action="test9.php" method="post">
             <p>
                 <p><select name="edit" id="edit">
                 <?php
@@ -185,7 +185,7 @@
 
         <?php
         
-        $filename = 'mission_3-5.txt';
+        $filename = 'test9.txt';
         $texts_export = file($filename);
     
         foreach((array)$texts_export as $text_export){

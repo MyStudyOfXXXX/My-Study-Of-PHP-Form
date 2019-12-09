@@ -2,7 +2,7 @@
 <head>
   <meta name="viewport" content="width=320, height=480, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta charset="utf-8">
-	<title>Test</title>
+	<title>Bulletin Board</title>
 </head>
 <center>
     <body>
@@ -18,7 +18,7 @@
             . "name char(32),"
             . "comment TEXT"
             .");";
-	          $stmt = $pdo->query($sql);
+	    $stmt = $pdo->query($sql);
 
             $sql ='SHOW TABLES';
             $result = $pdo -> query($sql);
@@ -36,7 +36,7 @@
             $sql -> execute();
             
             $sql = 'SELECT * FROM tbtest';
-	          $stmt = $pdo->query($sql);
+	    $stmt = $pdo->query($sql);
             $results = $stmt->fetchAll();
             foreach ($results as $row){
               echo $row['id'].',';
